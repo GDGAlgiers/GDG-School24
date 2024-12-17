@@ -22,12 +22,14 @@ Cyber Security/
 
 # How to Use
 
-1. Navigate to the Cryptography folder:
+### 1. Navigate to the Cryptography folder:
 
-` cd Cryptography/Cesar `
+``` 
+    cd Cryptography/Cesar 
 OR
-` cd Cryptography/vigenere `
-2. Choose the desired cipher (Caesar or Vigenère) and run the respective Python script.
+    cd Cryptography/vigenere 
+```
+### 2. Choose the desired cipher (Caesar or Vigenère) and run the respective Python script.
 ` python3 file_name `
 ## Example
 ` python3 1_cipher.py `
