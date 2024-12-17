@@ -3,6 +3,7 @@ This subfolder contains various cybersecurity-related scripts, including cryptog
 The primary focus is on demonstrating and implementing classic encryption methods like Caesar Cipher and Vigenere Cipher.
 
 # Project Structure
+```
 Cyber Security/ 
 ├── Cryptography/ 
 │   ├── Cesar/ 
@@ -17,7 +18,7 @@ Cyber Security/
 │       ├── 4_decryption.py           # Vigenere cipher decryption with case_sensitive_key 
 │       └── 5_break_vigenere.py       # Breaking Vigenere cipher (brute force) 
 ├── Readme.md                         # Project overview and instructions 
-
+```
 
 # How to Use
 
