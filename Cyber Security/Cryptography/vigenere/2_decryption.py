@@ -1,25 +1,25 @@
 """
-Vigenère Cipher: Encrypt a message using a case-sensitive repeating keyword.
+Vigenère Cipher: Decrypt a message using a case-sensitive repeating keyword.
 The key adapts its case to match the message's case.
 """
 
-# Message and keyword
-message = "GdG SchoOl"
-keyword = "KEY"  # The original key
+# Encrypted message and keyword
+encrypted_message = "ShU OolcKx"
+keyword = "meow"
 
-# Function to shift one character
-def shift_character(c, k):
+# Function to shift one character backward
+def shift_character_back(c, k):
     """
-    Shifts a character forward based on the case-sensitive keyword.
+    Shifts a character backward based on the case-sensitive keyword.
     """
     if c.isupper():
-        return chr(((ord(c) - ord('A') + k) % 26) + ord('A'))
+        return chr(((ord(c) - ord('A') - k + 26) % 26) + ord('A'))
     elif c.islower():
-        return chr(((ord(c) - ord('a') + k) % 26) + ord('a'))
+        return chr(((ord(c) - ord('a') - k + 26) % 26) + ord('a'))
     else:
         return c  # Non-alphabetic character
 
-# Function to generate a case-sensitive repeated key
+
 def generate_case_sensitive_key(message, keyword):
     """
     Repeats the keyword to match the length and case of the message.
@@ -37,30 +37,31 @@ def generate_case_sensitive_key(message, keyword):
         else:
             repeated_key.append(char)  # Non-alphabetic characters are ignored
     return "".join(repeated_key)
-
-# Function to encrypt the message
-def encrypt_vigenere(message, keyword):
+# Function to decrypt the message
+def decrypt_vigenere(encrypted_message, keyword):
     """
-    Encrypts a message using the Vigenère cipher.
+    Decrypts a message using the Vigenère cipher.
     """
     result = ""
-    case_sensitive_key = generate_case_sensitive_key(message, keyword)
+    case_sensitive_key = generate_case_sensitive_key(encrypted_message, keyword)
     
-    for i, char in enumerate(message):
+    for i, char in enumerate(encrypted_message):
         if char.isalpha():
             shift = ord(case_sensitive_key[i].upper()) - ord('A')  # Shift based on the key character
-            result += shift_character(char, shift)
+            result += shift_character_back(char, shift)
         else:
             result += char  # Keep non-alphabetic characters unchanged
 
     return result
 
 # Main function
+
+
 def main():
-    encrypted_message = encrypt_vigenere(message, keyword)
-    print(f"Message: {message}")
-    print(f"Keyword: {keyword}")
+    decrypted_message = decrypt_vigenere(encrypted_message, keyword)
     print(f"Encrypted message: {encrypted_message}")
+    print(f"Keyword: {keyword}")
+    print(f"Decrypted message: {decrypted_message}")
 
 if __name__ == "__main__":
     main()
