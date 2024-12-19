@@ -1,0 +1,176 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  
+  /* Header and Navbar */
+  header {
+    background-color: #333;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0;
+  }
+  
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #ff9800;
+  }
+  
+  .navbar .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .navbar .menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For medium screens (tablets) */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      left: 0;
+      padding: 10px;
+      z-index: 1;
+    }
+  
+    .navbar .nav-links.active {
+      display: flex;
+    }
+  
+    .navbar .menu-icon {
+      display: block;
+    }
+  
+    .navbar .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .navbar .nav-links a {
+      font-size: 20px;
+    }
+  }
+  
+  /* For small screens (mobile) */
+  @media (max-width: 480px) {
+    .navbar .nav-links a {
+      font-size: 18px;
+    }
+  }
+  
+  /* Content Section Styles */
+  .hero {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
+  
+  .about,
+  .services,
+  .contact {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .about h2,
+  .services h2,
+  .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Services Section Styles */
+  .services {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .services .service-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    flex: 1;
+    box-sizing: border-box;
+    min-width: 250px; /* Set a minimum width for each item */
+  }
+  
+  .service-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  /* For large screens (desktop) */
+  @media (min-width: 768px) {
+    .services .service-item {
+      width: 30%; /* Each service takes up 30% of the container's width */
+    }
+  }
+  
+  /* For medium screens (tablets) */
+  @media (max-width: 768px) {
+    .services .service-item {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  /* Add some spacing for each section */
+  section {
+    margin-bottom: 40px;
+  }
+  

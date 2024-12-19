@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/resume-css.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .box-model {
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            border: 5px solid #333;
+            background-color: #ddd;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+        }
+        .flex-item {
+            background-color: #add8e6;
+            padding: 10px;
+            text-align: center;
+            flex: 1 1 150px; /* Shrinks, grows, and has a base size */
+            max-width: 200px;
+        }
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column; /* Stacks items vertically */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Fundamentals Guide</h1>
+
+    <h2>1. Linking CSS to HTML</h2>
+    <p>To link an external CSS file to your HTML:</p>
+    <pre>        &lt;link href="style.css" rel="stylesheet"&gt;
+    </pre>
+
+    <h2>2. Writing CSS</h2>
+    <p>CSS can be written in two main ways:</p>
+    <ul>
+        <li>
+            <strong>External CSS:</strong> Link it using the example above.
+        </li>
+        <li>
+            <strong>Inline &lt;style&gt; Tag:</strong>
+            <pre>                &lt;style&gt;
+                    p { color: blue; }
+                &lt;/style&gt;
+            </pre>
+        </li>
+    </ul>
+
+    <h2>3. CSS Selectors</h2>
+    <ul>
+        <li>Type selectors: <code>p</code>, <code>h1</code></li>
+        <li>Class selector:
+            <pre>                .example { color: red; }
+            </pre>
+        </li>
+        <li>ID selector:
+            <pre>                #unique { font-size: 20px; }
+            </pre>
+        </li>
+        <li>Attribute selector:
+            <pre>                input[type="text"] { border: 1px solid black; }
+            </pre>
+        </li>
+        <li>Pseudo-classes:
+            <pre>                a:hover { text-decoration: underline; }
+            </pre>
+        </li>
+    </ul>
+
+    <h2>4. CSS Box Model</h2>
+    <p>The box model includes:</p>
+    <ol>
+        <li>Content box</li>
+        <li>Padding</li>
+        <li>Border</li>
+        <li>Margin</li>
+    </ol>
+    <div class="box-model">Example Box</div>
+
+    <h2>5. Advanced CSS</h2>
+    <ul>
+        <li>
+            Positioning:
+            <pre>                relative, absolute, fixed, sticky
+            </pre>
+        </li>
+        <li>
+            Display:
+            <pre>                display: block; display: inline; display: flex;
+            </pre>
+        </li>
+        <li>
+            Visibility and Overflow:
+            <pre>                visibility: hidden;
+                overflow: scroll;
+            </pre>
+        </li>
+    </ul>
+
+    <h2>6. Flexbox in Detail</h2>
+    <p>Flexbox is a layout model that allows elements to align and distribute space effectively within a container:</p>
+    <p>Basic Flexbox Properties:</p>
+    <ul>
+        <li><strong>display:</strong> Defines a flex container.
+            <pre>display: flex;</pre>
+        </li>
+        <li><strong>flex-direction:</strong> Specifies the direction of the flex items.
+            <pre>row | row-reverse | column | column-reverse</pre>
+        </li>
+        <li><strong>justify-content:</strong> Aligns items horizontally.
+            <pre>flex-start | center | flex-end | space-around | space-between | space-evenly</pre>
+        </li>
+        <li><strong>align-items:</strong> Aligns items vertically.
+            <pre>flex-start | center | flex-end | stretch</pre>
+        </li>
+        <li><strong>align-content:</strong> Aligns multiple rows.
+            <pre>flex-start | center | flex-end | space-around</pre>
+        </li>
+    </ul>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>7. Media Queries in Detail</h2>
+    <p>Media queries help create responsive designs:</p>
+    <ul>
+        <li><strong>Basic syntax:</strong>
+            <pre>                @media (condition) {
+                    /* Styles */
+                }
+            </pre>
+        </li>
+        <li><strong>Common conditions:</strong>
+            <pre>                max-width: 600px; /* For smaller screens */
+                min-width: 768px; /* For tablets and up */
+                orientation: landscape; /* When the device is in landscape mode */
+            </pre>
+        </li>
+    </ul>
+    <p>Example:</p>
+    <pre>        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+    </pre>
+    <p>Combined queries:</p>
+    <pre>        @media (min-width: 600px) and (max-width: 900px) {
+            .box-model {
+                background-color: pink;
+            }
+        }
+    </pre>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:5500/resume-html.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics and Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007bff, #6610f2);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        section h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: block;
+            padding: 15px;
+            margin: 15px 0;
+            color: #d63384;
+            font-family: Consolas, "Courier New", monospace;
+        }
+
+        ul, ol {
+            margin: 10px 0 10px 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Basics and Examples</h1>
+</header>
+
+<main>
+    <section>
+        <h2>What is HTML?</h2>
+        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a webpage using elements represented by tags.</p>
+    </section>
+
+    <section>
+        <h2>Basic Structure of an HTML Document</h2>
+        <p>Every HTML document consists of the following basic structure:</p>
+        <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </code>
+    </section>
+
+    <section>
+        <h2>Common HTML Elements</h2>
+        <h3>Headings</h3>
+        <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important).</p>
+        <code>
+            &lt;h1&gt;This is an H1 heading&lt;/h1&gt;<br>
+            &lt;h2&gt;This is an H2 heading&lt;/h2&gt;<br>
+            &lt;h3&gt;This is an H3 heading&lt;/h3&gt;
+        </code>
+
+        <h3>Paragraphs</h3>
+        <p>Paragraphs are defined using the <code>&lt;p&gt;</code> tag.</p>
+        <code>
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+            &lt;p&gt;This is another paragraph.&lt;/p&gt;
+        </code>
+
+        <h3>Links</h3>
+        <p>Links are created using the <code>&lt;a&gt;</code> tag.</p>
+        <code>
+            &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+        </code>
+
+        <h3>Images</h3>
+        <p>Images are embedded using the <code>&lt;img&gt;</code> tag.</p>
+        <code>
+            &lt;img src="image.jpg" alt="Description of image"&gt;
+        </code>
+    </section>
+
+    <section>
+        <h2>Lists</h2>
+        <h3>Ordered List</h3>
+        <p>Creates a numbered list using the <code>&lt;ol&gt;</code> tag.</p>
+        <code>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Second item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Third item&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </code>
+
+        <h3>Unordered List</h3>
+        <p>Creates a bullet-point list using the <code>&lt;ul&gt;</code> tag.</p>
+        <code>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Second item&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Third item&lt;/li&gt;<br>
+            &lt;/ul&gt;
+        </code>
+    </section>
+
+    <section>
+        <h2>Tables</h2>
+        <p>Tables are created using the tr,td and th tags. Here's a breakdown of what these tags represent:</p>
+        <ul>
+            <li><strong>&lt;tr&gt;</strong>: Defines a table row. Each row contains one or more cells, which can be data or header cells.</li>
+            <li><strong>&lt;td&gt;</strong>: Defines a standard data cell within a row. These cells hold the actual data you want to display in the table. For example, <code>&lt;td&gt;Douaa&lt;/td&gt;</code> represents a cell containing the text "Douaa."</li>
+            <li><strong>&lt;th&gt;</strong>: Defines a header cell, usually appearing at the top of a column. Header cells are bold and centered by default. For instance, <code>&lt;th&gt;Name&lt;/th&gt;</code> represents a column header titled "Name."</li>
+        </ul>
+        <p>Attributes commonly used in tables:</p>
+        <ul>
+            <li><strong>border</strong>: Specifies the width of the border around the table. Example: <code>&lt;table border="1"&gt;</code>.</li>
+            <li><strong>cellpadding</strong>: Defines the space between the cell content and its border. Example: <code>&lt;table cellpadding="5"&gt;</code>.</li>
+            <li><strong>cellspacing</strong>: Sets the space between cells in a table. Example: <code>&lt;table cellspacing="5"&gt;</code>.</li>
+        </ul>
+        <code>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Douaa&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;20&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </code>
+    </section>
+
+    <section>
+        <h2>Forms</h2>
+        <p>Forms collect user input using various form elements like text fields, dropdowns, and buttons. Forms consist of multiple components:</p>
+
+        <h3>Input Elements</h3>
+        <p>The <code>&lt;input&gt;</code> tag is used to create various types of input fields. It supports multiple <strong>types</strong> and <strong>attributes</strong>:</p>
+        <ul>
+            <li><strong>type</strong>: Defines the type of input (e.g., text, password, email, checkbox, radio, etc.).</li>
+            <li><strong>name</strong>: Specifies the name of the input field, used to identify form data when submitted.</li>
+            <li><strong>id</strong>: Specifies a unique identifier for the input element, often used with the <code>&lt;label&gt;</code> tag.</li>
+            <li><strong>value</strong>: Defines the default value of the input field.</li>
+            <li><strong>placeholder</strong>: Provides a hint about what to enter in the field.</li>
+            <li><strong>required</strong>: Makes the field mandatory before form submission.</li>
+        </ul>
+        <code>
+            &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+            &lt;input type="email" id="email" name="email" placeholder="Enter your email" required&gt;
+        </code>
+
+        <h3>Button</h3>
+        <p>The <code>&lt;button&gt;</code> tag is used to create clickable buttons. Attributes include:</p>
+        <ul>
+            <li><strong>type</strong>: Defines the button's behavior (<code>submit</code>, <code>reset</code>, or <code>button</code>).</li>
+            <li><strong>onclick</strong>: Specifies a JavaScript function to run when the button is clicked.</li>
+        </ul>
+        <code>
+            &lt;button type="submit" onclick="alert('Form submitted!')"&gt;Submit&lt;/button&gt;
+        </code>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 GDG SCHOOL </p>
+</footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
