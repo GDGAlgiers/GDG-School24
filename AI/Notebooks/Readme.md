@@ -1,1 +1,0 @@
-Put here AI workshop's ressources
